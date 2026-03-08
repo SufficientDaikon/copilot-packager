@@ -1,0 +1,14 @@
+{
+  "name": "copilot-packager",
+  "description": "Packages agents, skills, and artifacts into shareable git repos with professional README and HTML documentation website. Part of the sdd-vscode-agents collection.",
+  "version": "1.0.0",
+  "author": { "name": "SufficientDaikon" },
+  "license": "MIT",
+  "homepage": "https://github.com/SufficientDaikon/copilot-packager",
+  "repository": "https://github.com/SufficientDaikon/copilot-packager",
+  "keywords": ["packaging", "documentation", "sharing", "distribution", "github-pages"],
+  "category": "Developer Tools",
+  "tags": ["sdd-vscode-agents"],
+  "agents": "agents/",
+  "hooks": "hooks.json"
+}

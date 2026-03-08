@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "./scripts/scan-artifacts.sh",
+        "windows": "powershell -ExecutionPolicy Bypass -File scripts\\scan-artifacts.ps1",
+        "timeout": 10
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "./scripts/on-package-complete.sh",
+        "windows": "powershell -ExecutionPolicy Bypass -File scripts\\on-package-complete.ps1",
+        "timeout": 10
+      }
+    ]
+  }
+}
