@@ -1,70 +1,63 @@
+<div align="center">
+
+<img src="https://img.shields.io/badge/VS%20Code%20Copilot%20Agent-Package%20Engineer-A177FE?style=for-the-badge&logo=github-copilot&logoColor=white" />
+
 # copilot-packager
 
-> **Part of [sdd-vscode-agents](https://github.com/SufficientDaikon/sdd-vscode-agents)** — install the full collection for the complete SDD pipeline + UI/UX lifecycle.
+*Packages agents, skills, and templates into shareable git repos.*
 
-A VS Code Copilot agent plugin that packages Copilot agents, skills, and artifacts into shareable GitHub repos with documentation.
+[![Part of SDD Agent Suite](https://img.shields.io/badge/Part%20of-SDD%20Agent%20Suite-A177FE?style=flat-square)](https://github.com/SufficientDaikon/sdd-vscode-agents)
 
-## What it does
+</div>
 
-The **packager** agent creates distribution packages:
-- Generates professional README.md with install instructions
-- Creates a self-contained docs/ website (HTML/CSS)
-- Adds cross-platform install scripts (sh + ps1)
-- Configures proper .gitignore and LICENSE
-- Pushes to GitHub with proper branch setup
+---
 
-## Hooks included
+## What It Does
 
-| Hook | Event | What it does |
-|------|-------|-------------|
-| **Artifact scan** | `SessionStart` | Scans for agent files, README, package.json, and other packageable artifacts |
-| **Package summary** | `Stop` | Confirms the package was created and reminds about the documentation website |
+The **Packager** agent turns your custom agents, skills, templates, and development artifacts into polished, shareable git repositories. It handles README generation, repo scaffolding, and distribution packaging.
 
-## Install
+Whether you've built a custom Copilot agent, a reusable skill, or a project template, the Packager creates a professional repository structure with proper documentation, installation instructions, and usage examples.
 
-### Via Copilot CLI
-```bash
-copilot plugin install SufficientDaikon/copilot-packager
-```
+It understands the SDD ecosystem deeply and can package any combination of agents, skills, pipelines, and bundles into standalone distributable repos that others can install and use immediately.
 
-### Via VS Code settings
+## Features
 
-Clone the repo and add to your `settings.json`:
-```json
-"chat.plugins.paths": {
-    "/path/to/copilot-packager": true
-}
-```
+- ✅ Professional README generation with badges and examples
+- ✅ Repository scaffolding with proper structure
+- ✅ Distribution packaging for agents, skills, and templates
+- ✅ Cross-platform installation script generation
 
-### Via local path
-```bash
-git clone https://github.com/SufficientDaikon/copilot-packager.git
-copilot plugin install ./copilot-packager
-```
+## Installation
+
+1. Install the [SDD VS Code Agents](https://github.com/SufficientDaikon/sdd-vscode-agents) extension
+2. Open VS Code Copilot Chat
+3. Use `@packager` to invoke this agent
 
 ## Usage
 
-Switch to the **packager** agent in VS Code chat, then:
 ```
-Package this agent as a shareable GitHub repo
-```
-**Expected output**: A complete GitHub repo with README, docs site, install scripts, and proper metadata.
-
-## Pipeline position
-
-```
-any agent -> **packager** -> GitHub
+@packager Package my custom agent as a shareable git repo
 ```
 
-## Full collection
+## Part of the SDD Agent Suite
 
-This agent works best as part of the full SDD + UI/UX pipeline. Install all 13 agents:
+This agent is one of 13 specialized Copilot Chat participants in the [SDD VS Code Agents](https://github.com/SufficientDaikon/sdd-vscode-agents) ecosystem.
 
-```bash
-copilot plugin install SufficientDaikon/sdd-vscode-agents
-```
-
-See the [full collection](https://github.com/SufficientDaikon/sdd-vscode-agents) for documentation and the complete agent list.
+| Agent | Role |
+|---|---|
+| **spec-writer** | Specification Architect |
+| **implementer** | Implementation Engineer |
+| **reviewer** | Compliance Reviewer |
+| **packager** | Package Engineer |
+| **ui-lifecycle-master** | UI Lifecycle Orchestrator |
+| **ux-research** | UX Researcher |
+| **info-arch** | Information Architect |
+| **wireframe** | Wireframe Designer |
+| **ui-design** | Visual Designer |
+| **ux-design** | UX Designer |
+| **frontend-impl** | Frontend Engineer |
+| **design-reviewer** | Design Reviewer |
+| **ux-testing** | UX Tester |
 
 ## License
 
